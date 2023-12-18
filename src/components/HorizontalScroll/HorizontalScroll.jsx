@@ -2,6 +2,8 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {useLayoutEffect, useRef} from 'react';
 import './HorizontalScroll.css';
+import Story from './Story/Story';
+import Origine from './Origine/Origine';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,28 +45,12 @@ export default function App() {
   return (
     <div className="App" ref={component}>
       <div ref={slider} className="container">
-        <div className="story panel">
-          <div>
-            <h1>
-              Yakuzas Story
-            </h1>
-            <div className="description">
-              <p>
-                L’origine des yakuzas remonte à l’ère Édo entre 1603 et 1868. En
-                effet ils descendent de trois corporations différentes les
-                bakuto
-                ( joueurs professionnels qui travaillaient dans les villes les
-                marchés et les foires dont la spécialité était les jeux de
-                hasard)
-                Les tekiya ( les colporteurs qui voyagé sur les routes)
-                Et les machi-yokko ( groupes se considèrent comme protecteur du
-                peuple lors de la démilitarisation du pays dans les années 1600
-                durant laquelle les attaques de ronins qui se multipliait)
-              </p>
-            </div>
-          </div>
+        <div className="panel">
+          <Story/>
         </div>
-        <div className="panel ">ONE</div>
+        <div className="panel">
+          <Origine/>
+        </div>
         <div className="panel ">TWO</div>
         <div className="panel ">THREE</div>
         <div className="panel ">FOUR</div>

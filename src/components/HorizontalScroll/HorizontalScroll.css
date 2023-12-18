@@ -45,34 +45,3 @@ body {
     font-family: Inter, serif;
     margin: 1rem;
 }
-
-.panel h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0;
-    padding: 1rem;
-}
-
-.description {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.description p {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-inline: 1rem;
-    padding: 1rem;
-    width: 500px;
-}
-
-.redBall {
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background-color: #BC002D;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
