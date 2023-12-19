@@ -9,3 +9,5 @@ function Expansion() {
     </>
   );
 }
+
+export default Expansion;

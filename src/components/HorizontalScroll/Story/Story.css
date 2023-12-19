@@ -1,0 +1,54 @@
+.storysection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh; /* ensure div takes up full viewport height */
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* aligner les éléments horizontalement */
+    height: 100vh; /* pour prendre la pleine hauteur de la fenêtre de visualisation */
+}
+.cont > div {
+    width: 50%;
+}
+
+.cont > div > p {
+    font-size: 18px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    width: 90%; /* or adjust as needed */
+    margin-right: 10%; /* or adjust as needed */
+}
+
+.video-tag {
+    max-width: 100%;
+    width: 90%; /* or adjust as needed */
+}
+
+.title {
+    display: flex;
+    align-items: start; /* Aligner les éléments centré verticalement */
+}

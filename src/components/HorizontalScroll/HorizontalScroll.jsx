@@ -1,31 +1,24 @@
+import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import {useLayoutEffect, useRef} from 'react';
-import './HorizontalScroll.css';
-import Story from './Story/Story';
+
 import Origine from './Origine/Origine';
+import Expansion from './Expansion/Expansion.jsx';
+import Story from './Story/Story';
+import Lumiere from './Lumiere/Lumiere.jsx';
+import Ombre from './Ombre/Ombre.jsx';
+import Tradition from './Tradition/Tradition.jsx';
+import Influences from './Influences/Influences.jsx';
+import Disparition from './Disparition/Disparition.jsx';
+import './HorizontalScroll.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
-  //Animation
   const component = useRef();
   const slider = useRef();
-  const redBall = useRef();
 
   useLayoutEffect(() => {
-    // Red ball animation
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: redBall.current,
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 2,
-      },
-    });
-
-    tl.fromTo(redBall.current, {scale: 0.1}, {scale: 1});
-
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray('.panel');
       gsap.to(panels, {
@@ -38,7 +31,9 @@ export default function App() {
           end: () => '+=' + slider.current.offsetWidth,
         },
       });
+
     }, component);
+
     return () => ctx.revert();
   });
 
@@ -46,18 +41,29 @@ export default function App() {
     <div className="App" ref={component}>
       <div ref={slider} className="container">
         <div className="panel">
-          <Story/>
+          <Story />
         </div>
         <div className="panel">
-          <Origine/>
+          <Origine />
         </div>
-        <div className="panel ">TWO</div>
-        <div className="panel ">THREE</div>
-        <div className="panel ">FOUR</div>
-        <div className="panel ">FIVE</div>
-        <div className="panel ">SIX</div>
-        <div className="panel ">SEVEN</div>
-        <div className="panel ">EIGHT</div>
+        <div className="panel">
+          <Expansion />
+        </div>
+        <div className="panel">
+          <Lumiere />
+        </div>
+        <div className="panel">
+          <Ombre />
+        </div>
+        <div className="panel">
+          <Disparition />
+        </div>
+        <div className="panel">
+          <Tradition />
+        </div>
+        <div className="panel">
+          <Influences />
+        </div>
       </div>
     </div>
   );
