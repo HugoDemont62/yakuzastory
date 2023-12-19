@@ -6,7 +6,7 @@ export default function LoadingScreen() {
   return (
     <div className="loadingScreen">
       <PuffLoader color={'#BC002D'} loading={true} size={150}/>
-      Yakuza Story
+      Yakuzas Story
     </div>
   );
 }

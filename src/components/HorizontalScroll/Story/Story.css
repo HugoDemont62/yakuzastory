@@ -29,18 +29,17 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: row; /* aligner les éléments horizontalement */
-    height: 100vh; /* pour prendre la pleine hauteur de la fenêtre de visualisation */
 }
 .cont > div {
     width: 50%;
 }
 
 .cont > div > p {
-    font-size: 18px;
+    font-size: 2rem;
     line-height: 1.6;
+    text-align: justify;
     word-wrap: break-word;
     width: 90%; /* or adjust as needed */
-    margin-right: 10%; /* or adjust as needed */
 }
 
 .video-tag {
@@ -51,4 +50,5 @@ h1 {
 .title {
     display: flex;
     align-items: start; /* Aligner les éléments centré verticalement */
+    margin-bottom: 5rem;
 }

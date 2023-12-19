@@ -17,10 +17,16 @@ function HoverVideoPlayer({src, width, height}) {
   };
 
   const handleMouseOut = () => {
-    if (video.current) {
-      video.current.pause();
-      video.current.currentTime = 0; // Retourne à la 1ère frame
-    }
+    if (!video.current) return; // verifier si videoRef existe
+    video.current.pause();
+    let rewind = setInterval(function(){
+      if(video.current.currentTime <= 0){ // Lorsqu'on atteint le début de la vidéo
+        clearInterval(rewind);
+        video.current.pause();
+      } else {
+        video.current.currentTime -= 0.1; // Décrémente currentTime
+      }
+    }, 30);
   };
 
   return (
