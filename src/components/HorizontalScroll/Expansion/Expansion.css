@@ -1,7 +1,34 @@
-.image-column {
+.content-center {
     display: flex;
-    height: 100vh;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    overflow: hidden;
+}
+
+p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+img {
+    width: 500px;
+    height: calc(100vh / 3);
+    object-fit: cover;
+    object-position: center;
+}

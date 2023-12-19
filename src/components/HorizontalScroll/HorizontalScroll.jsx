@@ -11,7 +11,6 @@ import Tradition from './Tradition/Tradition.jsx';
 import Influences from './Influences/Influences.jsx';
 import Disparition from './Disparition/Disparition.jsx';
 import './HorizontalScroll.css';
-import video from '../../assets/video/Yakuza v2.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 

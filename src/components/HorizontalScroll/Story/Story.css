@@ -35,7 +35,6 @@ h1 {
 }
 
 .cont > div > p {
-    font-size: 2rem;
     line-height: 1.6;
     text-align: justify;
     word-wrap: break-word;
@@ -51,4 +50,5 @@ h1 {
     display: flex;
     align-items: start; /* Aligner les éléments centré verticalement */
     margin-bottom: 5rem;
+    width: fit-content;
 }
