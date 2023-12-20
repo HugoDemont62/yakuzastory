@@ -46,4 +46,10 @@ body {
 
 .black {
     background: black;
+    color: white;
+}
+
+.no-cote {
+    margin: 0;
+    padding: 0;
 }

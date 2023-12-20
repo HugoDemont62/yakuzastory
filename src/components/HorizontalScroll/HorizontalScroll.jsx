@@ -8,9 +8,9 @@ import Story from './Story/Story';
 import Lumiere from './Lumiere/Lumiere.jsx';
 import Ombre from './Ombre/Ombre.jsx';
 import Tradition from './Tradition/Tradition.jsx';
-import Influences from './Influences/Influences.jsx';
 import Disparition from './Disparition/Disparition.jsx';
 import './HorizontalScroll.css';
+import video from '../../assets/video/Yakuza v2.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,6 +53,9 @@ export default function App() {
           <Lumiere/>
         </div>
 
+        <video className="panel no-cote" src={video} autoPlay muted loop>
+        </video>
+
         <div className="panel black">
           <Ombre/>
         </div>
@@ -61,9 +64,6 @@ export default function App() {
         </div>
         <div className="panel black">
           <Tradition/>
-        </div>
-        <div className="panel black">
-          <Influences/>
         </div>
       </div>
     </div>
